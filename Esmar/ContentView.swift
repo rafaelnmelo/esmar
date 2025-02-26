@@ -24,10 +24,7 @@ struct ContentView: View {
             VStack {
                 Text(total as NSNumber, formatter: NumberFormatter.currency)
                     .fontWeight(.bold)
-                BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: { budgetCategory in
-                    viewContext.delete(budgetCategory)
-                    saveContext()
-                })
+                BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: deleteBudgetCategory)
             }
             .sheet(isPresented: $isPresented, content: {
                 AddBudgetCategoryView()
@@ -49,6 +46,11 @@ extension ContentView {
         budgetCategoryResults.reduce(0) { result, budgetCategory in
             result + budgetCategory.total
         }
+    }
+    
+    private func deleteBudgetCategory(budgetCategory: BudgetCategory) {
+        viewContext.delete(budgetCategory)
+        saveContext()
     }
     
     private func saveContext() {
