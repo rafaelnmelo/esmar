@@ -17,6 +17,7 @@
 		756D459F2D6F4B600038542D /* AddBudgetCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D459E2D6F4B600038542D /* AddBudgetCategoryView.swift */; };
 		756D45A22D6F4DF50038542D /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45A12D6F4DF50038542D /* NumberFormatter+Extensions.swift */; };
 		756D45A42D6F60C50038542D /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45A32D6F60C50038542D /* BudgetListView.swift */; };
+		756D45A62D6F82B90038542D /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45A52D6F82B90038542D /* Transaction+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		756D459E2D6F4B600038542D /* AddBudgetCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetCategoryView.swift; sourceTree = "<group>"; };
 		756D45A12D6F4DF50038542D /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		756D45A32D6F60C50038542D /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
+		756D45A52D6F82B90038542D /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				756D45972D6F44F10038542D /* BudgetCategory+CoreDataClass.swift */,
+				756D45A52D6F82B90038542D /* Transaction+CoreDataClass.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				756D45A42D6F60C50038542D /* BudgetListView.swift in Sources */,
 				756D45852D6F42E50038542D /* ContentView.swift in Sources */,
 				756D45A22D6F4DF50038542D /* NumberFormatter+Extensions.swift in Sources */,
+				756D45A62D6F82B90038542D /* Transaction+CoreDataClass.swift in Sources */,
 				756D458F2D6F42E60038542D /* BudgetModel.xcdatamodeld in Sources */,
 				756D459F2D6F4B600038542D /* AddBudgetCategoryView.swift in Sources */,
 				756D45832D6F42E50038542D /* EsmarApp.swift in Sources */,
