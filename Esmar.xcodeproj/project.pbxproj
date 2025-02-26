@@ -11,7 +11,6 @@
 		756D45852D6F42E50038542D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45842D6F42E50038542D /* ContentView.swift */; };
 		756D45872D6F42E60038542D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756D45862D6F42E60038542D /* Assets.xcassets */; };
 		756D458A2D6F42E60038542D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756D45892D6F42E60038542D /* Preview Assets.xcassets */; };
-		756D458C2D6F42E60038542D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D458B2D6F42E60038542D /* Persistence.swift */; };
 		756D458F2D6F42E60038542D /* EsmarModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 756D458D2D6F42E60038542D /* EsmarModel.xcdatamodeld */; };
 		756D45982D6F44F10038542D /* BudgetCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45972D6F44F10038542D /* BudgetCategory+CoreDataClass.swift */; };
 		756D459B2D6F481A0038542D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D459A2D6F481A0038542D /* CoreDataManager.swift */; };
@@ -23,7 +22,6 @@
 		756D45842D6F42E50038542D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		756D45862D6F42E60038542D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		756D45892D6F42E60038542D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		756D458B2D6F42E60038542D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		756D458E2D6F42E60038542D /* Esmar.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Esmar.xcdatamodel; sourceTree = "<group>"; };
 		756D45972D6F44F10038542D /* BudgetCategory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BudgetCategory+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		756D459A2D6F481A0038542D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
@@ -59,14 +57,13 @@
 		756D45812D6F42E50038542D /* Esmar */ = {
 			isa = PBXGroup;
 			children = (
-				756D45992D6F47890038542D /* Managers */,
-				756D45952D6F44CC0038542D /* Models */,
 				756D45822D6F42E50038542D /* EsmarApp.swift */,
 				756D45842D6F42E50038542D /* ContentView.swift */,
-				756D45862D6F42E60038542D /* Assets.xcassets */,
-				756D458B2D6F42E60038542D /* Persistence.swift */,
-				756D458D2D6F42E60038542D /* EsmarModel.xcdatamodeld */,
+				756D45992D6F47890038542D /* Managers */,
+				756D45952D6F44CC0038542D /* Models */,
 				756D45882D6F42E60038542D /* Preview Content */,
+				756D459D2D6F4A700038542D /* Resources */,
+				756D459C2D6F4A1B0038542D /* Views */,
 			);
 			path = Esmar;
 			sourceTree = "<group>";
@@ -82,6 +79,7 @@
 		756D45952D6F44CC0038542D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				756D458D2D6F42E60038542D /* EsmarModel.xcdatamodeld */,
 				756D45962D6F44D10038542D /* Extensions */,
 			);
 			path = Models;
@@ -101,6 +99,21 @@
 				756D459A2D6F481A0038542D /* CoreDataManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		756D459C2D6F4A1B0038542D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		756D459D2D6F4A700038542D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				756D45862D6F42E60038542D /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				756D459B2D6F481A0038542D /* CoreDataManager.swift in Sources */,
-				756D458C2D6F42E60038542D /* Persistence.swift in Sources */,
 				756D45852D6F42E50038542D /* ContentView.swift in Sources */,
 				756D458F2D6F42E60038542D /* EsmarModel.xcdatamodeld in Sources */,
 				756D45832D6F42E50038542D /* EsmarApp.swift in Sources */,
