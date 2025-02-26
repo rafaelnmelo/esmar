@@ -8,18 +8,23 @@
 import SwiftUI
 import CoreData
 
+//MARK: - CLASS
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var budgetCategoryResults: FetchedResults<BudgetCategory>
     @State private var isPresented = false
     
+    var total: Double {
+        calculateTotal()
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
-                List(budgetCategoryResults) { budgetCategory in
-                    Text(budgetCategory.title ?? "")
-                }
+                Text(total as NSNumber, formatter: NumberFormatter.currency)
+                    .fontWeight(.bold)
+                BudgetListView(budgetCategoryResults: budgetCategoryResults)
             }
             .sheet(isPresented: $isPresented, content: {
                 AddBudgetCategoryView()
@@ -35,6 +40,16 @@ struct ContentView: View {
     }
 }
 
+//MARK: - FUNCTIONS
+extension ContentView {
+    private func calculateTotal() -> Double {
+        budgetCategoryResults.reduce(0) { result, budgetCategory in
+            result + budgetCategory.total
+        }
+    }
+}
+
+//MARK: - PREVIEW
 #Preview {
     ContentView().environment(\.managedObjectContext, CoreDataManager.shared.viewContext)
 }

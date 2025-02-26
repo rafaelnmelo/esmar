@@ -16,6 +16,7 @@
 		756D459B2D6F481A0038542D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D459A2D6F481A0038542D /* CoreDataManager.swift */; };
 		756D459F2D6F4B600038542D /* AddBudgetCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D459E2D6F4B600038542D /* AddBudgetCategoryView.swift */; };
 		756D45A22D6F4DF50038542D /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45A12D6F4DF50038542D /* NumberFormatter+Extensions.swift */; };
+		756D45A42D6F60C50038542D /* BudgetListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45A32D6F60C50038542D /* BudgetListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		756D459A2D6F481A0038542D /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		756D459E2D6F4B600038542D /* AddBudgetCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddBudgetCategoryView.swift; sourceTree = "<group>"; };
 		756D45A12D6F4DF50038542D /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		756D45A32D6F60C50038542D /* BudgetListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				756D459E2D6F4B600038542D /* AddBudgetCategoryView.swift */,
+				756D45A32D6F60C50038542D /* BudgetListView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				756D459B2D6F481A0038542D /* CoreDataManager.swift in Sources */,
+				756D45A42D6F60C50038542D /* BudgetListView.swift in Sources */,
 				756D45852D6F42E50038542D /* ContentView.swift in Sources */,
 				756D45A22D6F4DF50038542D /* NumberFormatter+Extensions.swift in Sources */,
 				756D458F2D6F42E60038542D /* BudgetModel.xcdatamodeld in Sources */,
