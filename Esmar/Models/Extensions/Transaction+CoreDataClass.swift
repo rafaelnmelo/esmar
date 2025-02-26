@@ -8,7 +8,6 @@
 import Foundation
 import CoreData
 
-@objc(BudgetCategory)
 public class Transaction: NSManagedObject {
     public override func awakeFromInsert() {
         self.dateCreated = Date()
