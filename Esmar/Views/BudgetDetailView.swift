@@ -61,6 +61,8 @@ extension BudgetDetailView {
             let transaction = Transaction(context: viewContext)
             transaction.title = title
             transaction.total = Double(total) ?? 0
+            budgetCategory.addToTransactions(transaction)
+            
             try viewContext.save()
         } catch {
             print(error.localizedDescription)
