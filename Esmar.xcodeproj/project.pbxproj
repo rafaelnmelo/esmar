@@ -11,7 +11,7 @@
 		756D45852D6F42E50038542D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45842D6F42E50038542D /* ContentView.swift */; };
 		756D45872D6F42E60038542D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756D45862D6F42E60038542D /* Assets.xcassets */; };
 		756D458A2D6F42E60038542D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756D45892D6F42E60038542D /* Preview Assets.xcassets */; };
-		756D458F2D6F42E60038542D /* EsmarModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 756D458D2D6F42E60038542D /* EsmarModel.xcdatamodeld */; };
+		756D458F2D6F42E60038542D /* BudgetModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 756D458D2D6F42E60038542D /* BudgetModel.xcdatamodeld */; };
 		756D45982D6F44F10038542D /* BudgetCategory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45972D6F44F10038542D /* BudgetCategory+CoreDataClass.swift */; };
 		756D459B2D6F481A0038542D /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D459A2D6F481A0038542D /* CoreDataManager.swift */; };
 		756D459F2D6F4B600038542D /* AddBudgetCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D459E2D6F4B600038542D /* AddBudgetCategoryView.swift */; };
@@ -84,7 +84,7 @@
 		756D45952D6F44CC0038542D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				756D458D2D6F42E60038542D /* EsmarModel.xcdatamodeld */,
+				756D458D2D6F42E60038542D /* BudgetModel.xcdatamodeld */,
 				756D45962D6F44D10038542D /* Extensions */,
 			);
 			path = Models;
@@ -203,7 +203,7 @@
 				756D459B2D6F481A0038542D /* CoreDataManager.swift in Sources */,
 				756D45852D6F42E50038542D /* ContentView.swift in Sources */,
 				756D45A22D6F4DF50038542D /* NumberFormatter+Extensions.swift in Sources */,
-				756D458F2D6F42E60038542D /* EsmarModel.xcdatamodeld in Sources */,
+				756D458F2D6F42E60038542D /* BudgetModel.xcdatamodeld in Sources */,
 				756D459F2D6F4B600038542D /* AddBudgetCategoryView.swift in Sources */,
 				756D45832D6F42E50038542D /* EsmarApp.swift in Sources */,
 				756D45982D6F44F10038542D /* BudgetCategory+CoreDataClass.swift in Sources */,
@@ -412,13 +412,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		756D458D2D6F42E60038542D /* EsmarModel.xcdatamodeld */ = {
+		756D458D2D6F42E60038542D /* BudgetModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
 				756D458E2D6F42E60038542D /* Esmar.xcdatamodel */,
 			);
 			currentVersion = 756D458E2D6F42E60038542D /* Esmar.xcdatamodel */;
-			path = EsmarModel.xcdatamodeld;
+			path = BudgetModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
