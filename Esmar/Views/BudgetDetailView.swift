@@ -7,9 +7,19 @@
 
 import SwiftUI
 
+//MARK: - CLASS
 struct BudgetDetailView: View {
     
+    @Environment(\.managedObjectContext) private var viewContext
+    
+    @State private var title: String = ""
+    @State private var total: String = ""
+    
     let budgetCategory: BudgetCategory
+    
+    var isFormValid: Bool {
+        self.checkFormValidation()
+    }
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,11 +33,50 @@ struct BudgetDetailView: View {
                     }.fontWeight(.bold)
                 }
             }
+            
+            Form {
+                Section {
+                    TextField("Nome", text: $title)
+                    TextField("Total", text: $total)
+                } header: {
+                    Text("Adicionar transação")
+                }
+                HStack {
+                    Spacer()
+                    Button("Salvar") {
+                        saveTransaction()
+                    }.disabled(!isFormValid)
+                    Spacer()
+                }
+            }
             Spacer()
+        }.padding()
+    }
+}
+
+//MARK: - FUNCTIONS
+extension BudgetDetailView {
+    private func saveTransaction(){
+        do {
+            let transaction = Transaction(context: viewContext)
+            transaction.title = title
+            transaction.total = Double(total) ?? 0
+            try viewContext.save()
+        } catch {
+            print(error.localizedDescription)
         }
     }
 }
 
+//MARK: - VALIDATIONS
+extension BudgetDetailView {
+    private func checkFormValidation() -> Bool {
+        guard let totalAsDouble = Double(total) else {return false}
+        return !title.isEmpty && !total.isEmpty && totalAsDouble > 0
+    }
+}
+
+//MARK: - PREVIEW
 #Preview {
     BudgetDetailView(budgetCategory: BudgetCategory())
 }
