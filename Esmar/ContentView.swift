@@ -12,7 +12,7 @@ import CoreData
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
-    @FetchRequest(sortDescriptors: []) private var budgetCategoryResults: FetchedResults<BudgetCategory>
+    @FetchRequest(fetchRequest: BudgetCategory.all) private var budgetCategoryResults
     @State private var sheetAction: SheetAction?
     
     var total: Double {
@@ -22,8 +22,11 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text(total as NSNumber, formatter: NumberFormatter.currency)
-                    .fontWeight(.bold)
+                HStack {
+                    Text("Orçamento total: ")
+                    Text(total as NSNumber, formatter: NumberFormatter.currency)
+                        .fontWeight(.bold)
+                }
                 BudgetListView(budgetCategoryResults: budgetCategoryResults,
                                onDeleteBudgetCategory: deleteBudgetCategory,
                                onEditBudgetCategory: editBudgetCategory)

@@ -49,8 +49,12 @@ struct BudgetDetailView: View {
                     Spacer()
                 }
             }
-            BudgetSummaryView(budgetCategory: budgetCategory)
-            TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
+            .frame(maxHeight: .infinity)
+            .padding([.bottom], 20)
+            VStack {
+                BudgetSummaryView(budgetCategory: budgetCategory)
+                TransactionListView(request: BudgetCategory.transactionsByCategoryRequest(budgetCategory), onDeleteTransaction: deleteTransaction)
+            }
             Spacer()
         }.padding()
     }
@@ -66,6 +70,7 @@ extension BudgetDetailView {
             budgetCategory.addToTransactions(transaction)
             
             try viewContext.save()
+            clearTextfields()
         } catch {
             print(error.localizedDescription)
         }
@@ -78,6 +83,11 @@ extension BudgetDetailView {
         } catch {
             print(error.localizedDescription)
         }
+    }
+    
+    private func clearTextfields() {
+        title = ""
+        total = ""
     }
 }
 
