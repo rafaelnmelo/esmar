@@ -20,6 +20,7 @@
 		756D45A62D6F82B90038542D /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45A52D6F82B90038542D /* Transaction+CoreDataClass.swift */; };
 		756D45A82D6F83770038542D /* BudgetDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45A72D6F83770038542D /* BudgetDetailView.swift */; };
 		756D45AA2D6F9A930038542D /* TransactionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45A92D6F9A930038542D /* TransactionListView.swift */; };
+		756D45AC2D6FA1BB0038542D /* BudgetSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45AB2D6FA1BB0038542D /* BudgetSummaryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		756D45A52D6F82B90038542D /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		756D45A72D6F83770038542D /* BudgetDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetDetailView.swift; sourceTree = "<group>"; };
 		756D45A92D6F9A930038542D /* TransactionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionListView.swift; sourceTree = "<group>"; };
+		756D45AB2D6FA1BB0038542D /* BudgetSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetSummaryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +121,9 @@
 			isa = PBXGroup;
 			children = (
 				756D459E2D6F4B600038542D /* AddBudgetCategoryView.swift */,
-				756D45A32D6F60C50038542D /* BudgetListView.swift */,
 				756D45A72D6F83770038542D /* BudgetDetailView.swift */,
+				756D45A32D6F60C50038542D /* BudgetListView.swift */,
+				756D45AB2D6FA1BB0038542D /* BudgetSummaryView.swift */,
 				756D45A92D6F9A930038542D /* TransactionListView.swift */,
 			);
 			path = Views;
@@ -218,6 +221,7 @@
 				756D45A22D6F4DF50038542D /* NumberFormatter+Extensions.swift in Sources */,
 				756D45A62D6F82B90038542D /* Transaction+CoreDataClass.swift in Sources */,
 				756D458F2D6F42E60038542D /* BudgetModel.xcdatamodeld in Sources */,
+				756D45AC2D6FA1BB0038542D /* BudgetSummaryView.swift in Sources */,
 				756D45AA2D6F9A930038542D /* TransactionListView.swift in Sources */,
 				756D45A82D6F83770038542D /* BudgetDetailView.swift in Sources */,
 				756D459F2D6F4B600038542D /* AddBudgetCategoryView.swift in Sources */,
