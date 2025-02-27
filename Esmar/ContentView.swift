@@ -32,8 +32,8 @@ struct ContentView: View {
                 switch sheetAction {
                 case .add:
                     AddBudgetCategoryView()
-                case .edit(_):
-                    AddBudgetCategoryView()
+                case .edit(let budgetCategory):
+                    AddBudgetCategoryView(budgetToBeEdited: budgetCategory)
                 }
             })
             .toolbar {

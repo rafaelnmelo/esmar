@@ -16,6 +16,11 @@ struct AddBudgetCategoryView: View {
     @State private var title: String = ""
     @State private var total: Double = 100
     @State private var messages: [String] = []
+    private var budgetToBeEdited: BudgetCategory?
+    
+    init(budgetToBeEdited: BudgetCategory? = nil) {
+        self.budgetToBeEdited = budgetToBeEdited
+    }
     
     var isFormValid: Bool {
         self.checkFormValidation()
@@ -37,6 +42,9 @@ struct AddBudgetCategoryView: View {
                 ForEach(messages, id: \.self) { message in
                     Text(message)
                 }
+            }
+            .onAppear {
+                fillExistingCategoryBudget()
             }.toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button("Cancelar") {
@@ -45,7 +53,7 @@ struct AddBudgetCategoryView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Salvar") {
-                        isFormValid ? save() : nil
+                        isFormValid ? saveOrUpdate() : nil
                     }
                 }
             }
@@ -55,16 +63,40 @@ struct AddBudgetCategoryView: View {
 
 //MARK: - FUNCTIONS
 extension AddBudgetCategoryView {
-    private func save() {
+    private func saveBudget() {
         let budgetCategory = BudgetCategory(context: viewContext)
         budgetCategory.title = title
         budgetCategory.total = total
-        
+    }
+    
+    private func editBudget(budget: BudgetCategory) {
+        let editedBudget = BudgetCategory.byID(budget.objectID)
+        editedBudget.title = title
+        editedBudget.total = total
+    }
+    
+    private func saveContext() {
         do {
             try viewContext.save()
             dismiss()
         } catch {
             print(error.localizedDescription)
+        }
+    }
+    
+    private func saveOrUpdate() {
+        if let budgetToBeEdited {
+            editBudget(budget: budgetToBeEdited)
+        } else {
+            saveBudget()
+        }
+        saveContext()
+    }
+    
+    private func fillExistingCategoryBudget() {
+        if let budgetToBeEdited {
+            title = budgetToBeEdited.title ?? ""
+            total = budgetToBeEdited.total
         }
     }
 }
