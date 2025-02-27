@@ -18,7 +18,9 @@ struct TransactionListView: View {
     
     var body: some View {
         if transactions.isEmpty {
-            Text("Nenhum gasto.")
+            List {
+                Text("Nenhum gasto.")
+            }
         } else {
             List {
                 ForEach(transactions) { transaction in
