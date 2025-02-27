@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7501D1172D70DDAE00EF2D78 /* SheetAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7501D1162D70DDAE00EF2D78 /* SheetAction.swift */; };
 		756D45832D6F42E50038542D /* EsmarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45822D6F42E50038542D /* EsmarApp.swift */; };
 		756D45852D6F42E50038542D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756D45842D6F42E50038542D /* ContentView.swift */; };
 		756D45872D6F42E60038542D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 756D45862D6F42E60038542D /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7501D1162D70DDAE00EF2D78 /* SheetAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetAction.swift; sourceTree = "<group>"; };
 		756D457F2D6F42E50038542D /* Esmar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Esmar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		756D45822D6F42E50038542D /* EsmarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EsmarApp.swift; sourceTree = "<group>"; };
 		756D45842D6F42E50038542D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -52,6 +54,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7501D1152D70DD9500EF2D78 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				7501D1162D70DDAE00EF2D78 /* SheetAction.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		756D45762D6F42E50038542D = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +83,7 @@
 			children = (
 				756D45822D6F42E50038542D /* EsmarApp.swift */,
 				756D45842D6F42E50038542D /* ContentView.swift */,
+				7501D1152D70DD9500EF2D78 /* Constants */,
 				756D45A02D6F4DD80038542D /* Extensions */,
 				756D45992D6F47890038542D /* Managers */,
 				756D45952D6F44CC0038542D /* Models */,
@@ -216,6 +227,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				756D459B2D6F481A0038542D /* CoreDataManager.swift in Sources */,
+				7501D1172D70DDAE00EF2D78 /* SheetAction.swift in Sources */,
 				756D45A42D6F60C50038542D /* BudgetListView.swift in Sources */,
 				756D45852D6F42E50038542D /* ContentView.swift in Sources */,
 				756D45A22D6F4DF50038542D /* NumberFormatter+Extensions.swift in Sources */,

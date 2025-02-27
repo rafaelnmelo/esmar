@@ -13,7 +13,7 @@ struct ContentView: View {
     
     @Environment(\.managedObjectContext) private var viewContext
     @FetchRequest(sortDescriptors: []) private var budgetCategoryResults: FetchedResults<BudgetCategory>
-    @State private var isPresented = false
+    @State private var sheetAction: SheetAction?
     
     var total: Double {
         calculateTotal()
@@ -24,15 +24,22 @@ struct ContentView: View {
             VStack {
                 Text(total as NSNumber, formatter: NumberFormatter.currency)
                     .fontWeight(.bold)
-                BudgetListView(budgetCategoryResults: budgetCategoryResults, onDeleteBudgetCategory: deleteBudgetCategory)
+                BudgetListView(budgetCategoryResults: budgetCategoryResults,
+                               onDeleteBudgetCategory: deleteBudgetCategory,
+                               onEditBudgetCategory: editBudgetCategory)
             }
-            .sheet(isPresented: $isPresented, content: {
-                AddBudgetCategoryView()
+            .sheet(item: $sheetAction, content: { sheetAction in
+                switch sheetAction {
+                case .add:
+                    AddBudgetCategoryView()
+                case .edit(_):
+                    AddBudgetCategoryView()
+                }
             })
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("+ categorias") {
-                        isPresented = true
+                        sheetAction = .add
                     }
                 }
             }.padding()
@@ -51,6 +58,10 @@ extension ContentView {
     private func deleteBudgetCategory(budgetCategory: BudgetCategory) {
         viewContext.delete(budgetCategory)
         saveContext()
+    }
+    
+    private func editBudgetCategory(budgetCategory: BudgetCategory) {
+        sheetAction = .edit(budgetCategory)
     }
     
     private func saveContext() {
